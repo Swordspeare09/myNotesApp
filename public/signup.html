@@ -7,44 +7,10 @@
   <title>myNotes | Sign-Up</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-        data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          myNotes
-        </a>
-
-        <a class="navbar-item">
-          New Note
-        </a>
-      </div>
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
-  </nav>
   <section class="hero is-medium is-primary is-bold">
     <div class="hero-body">
       <div class="container">
@@ -68,7 +34,7 @@
 
       <div class="field">
         <p class="control has-icons-left has-icons-right">
-          <input class="input" style="width: 33%;" type="email" placeholder="Email">
+          <input id="userEmail" class="input" style="width: 33%;" type="email" placeholder="Email">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -76,7 +42,7 @@
       </div>
       <div class="field">
         <p class="control has-icons-left">
-          <input class="input" style="width: 33%;" type="password" placeholder="Password">
+          <input id="userPassword" class="input" style="width: 33%;" type="password" placeholder="Password">
           <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
@@ -84,13 +50,13 @@
       </div>
       <div class="field">
         <p class="control">
-          <button class="button is-success">
-            Login
+          <button id="sign_up" class="button is-success">
+            Sign Up
           </button>
         </p>
       </div>
-      <p>Already have an account? Login <a href = "">HERE</a></p>
     </div>
   </section>
+  <script src="/js/signup.js"></script>
 </body>
 </html>
