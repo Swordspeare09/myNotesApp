@@ -1,35 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <title>myNotes | Home </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+  
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item is-hoverable is-primary is-outlined">
+          myNotes
+        </a>
+
+        <a class="navbar-item is-primary is-hovered is-outlined">
+          New Note
+        </a>
       </div>
     </div>
-  </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light">
+            Log out
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <figure class="image is-128x128">
+          <img class="is-rounded" id="user_icon" src="https://bulma.io/images/placeholders/128x128.png">
+        </figure>
+      </div>
+      <div class="container">
+        <h1 class="title">
+          myNotes
+        </h1>
+        <h2 class="subtitle">
+          <!-- INSERT USERNAME -->'s personalized private note-taker!
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <section class="section">
+        <div class="column is-half">
+          <div class="field">
+            <div class="control">
+              <input class="input is-primary" type="text" placeholder="Add me to SQL, Get Alcohol, Sleep...">
+            </div>
+          </div>
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <div class="select is-fullwidth">
+                <select name="category">
+                  <option value="General">General</option>
+                  <option value="Shopping_List">Shopping List</option>
+                  <option value="Books_to_Read">Books to Read</option>
+                  <option value="Books_to_Read">Networking Contacts</option>
+                  <option value="Books_to_Read">Ideas to Cultivate</option>
+                </select>
+              </div>
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-primary">Choose</button>
+            </div>
+          </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+          <div class="field is-grouped">
+            <p class="control">
+              <button class="button is-light is-primary">
+                Save
+              </button>
+            </p>
+            <p class="control">
+              <button class="button is-warning is-light">
+                Cancel
+              </button>
+            </p>
+            </p>
+          </div>
+        </div>
+    </div>
 
+    <section>
+      <div class="container">
+        <section class="section">
+          <div class="tabs">
+            <ul>
+              <li class="is-active"><a>All</a></li>
+              <li><a>General</a></li>
+              <li><a>Shopping List</a></li>
+              <li><a>Books to Read</a></li>
+              <li><a>Networking Contacts</a></li>
+              <li><a>Ideas to Cultivate</a></li>
+            </ul>
+          </div>
+
+          <div class="field is-grouped">
+            <p class="control">
+              <button class="button is-light is-primary">
+                Edit
+              </button>
+            </p>
+            <p class="control">
+              <button class="button is-danger is-light">
+                Delete
+              </button>
+            </p>
+          </div>
+      </div>
+      </div>
+    </section>
+    </div>
 </body>
 
 </html>
