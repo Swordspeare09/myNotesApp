@@ -25,7 +25,7 @@ module.exports = function(app) {
         body: req.body.text,
         UserId: req.user.id
       }).then(function(data){
-          res.json(data);
+        res.json(data);
       })
       .catch(function(err) {
         res.status(500).json(err);
