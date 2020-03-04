@@ -30,7 +30,7 @@ $(document).ready(function() {
     })
       .then(function() {
         window.location.replace("/members");
-        // If there's an error, handle it by throwing up a bootstrap alert
+        // If there's an error, handle it by throwing up an alert (bulma)
       })
       .catch(handleLoginErr);
   }
