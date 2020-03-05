@@ -22,3 +22,6 @@
     margin-right: auto;
 }
 
+li {
+    list-style: none;
+}
