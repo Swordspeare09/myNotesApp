@@ -24,7 +24,7 @@ li {
 
 /* TESTING ANIMATION */
 
-.container {
+.animation {
     width: 100%;
     font-weight: 900;
     padding: 0 0 1px;
@@ -32,9 +32,28 @@ li {
 }
 
 .animate {
-    font-size: 100px;
+    font-size: 80px;
     margin: 1px 0 0;
 }
+
+@media only screen and (max-width: 500px){
+    .animate {
+        font-size: 60px;
+    }
+ }
+
+ @media only screen and (max-width: 392px){
+    .animate {
+        font-size: 50px;
+    }
+ }
+
+ @media only screen and (max-width: 336px){
+    .animate {
+        font-size: 40px;
+    }
+ }
+
 
 .animate span {
     display: inline-block;
