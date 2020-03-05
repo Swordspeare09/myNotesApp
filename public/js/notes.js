@@ -97,12 +97,15 @@ var renderNoteList = function (notes) {
     var note = notes[i];
 
     var $li = $("<li class='list-group-item'>").data(note);
-    var $span = $("<span>").text(note.body);
+    var $span = $("<span class='item-text'>").text(note.body);
+    var $editBtn = $(
+      "<button class='button is-light is-primary'>Edit</button>"
+    );
     var $delBtn = $(
       "<button class='button is-danger is-light float-right delete-note'> Delete </button>"
     );
 
-    $li.append($span, $delBtn);
+    $li.append($span,$editBtn, $delBtn);
     noteListItems.push($li);
   }
 
