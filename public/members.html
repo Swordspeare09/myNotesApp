@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>myNotes | Home </title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
@@ -27,7 +29,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a id="log_out"  href="/login.html" class="button is-light">
+          <a id="log_out" href="/login.html" class="button is-light">
             Log out
           </a>
         </div>
@@ -58,7 +60,7 @@
         <div class="column is-half">
           <div class="field">
             <div class="control">
-              <input id="new_note"class="input is-primary" type="text" placeholder="Add me to SQL, Get Alcohol, Sleep...">
+              <input id="new_note" class="input is-primary" type="text" placeholder="Get Alcohol, Sleep...">
             </div>
           </div>
 
@@ -68,36 +70,42 @@
                 Save
               </button>
             </p>
-            
+
           </div>
         </div>
     </div>
 
     <section>
-      <div class="container">
-        <section class="section">
-          <div class="tabs">
-            <ul id="noteList">
-              <li class="is-active"><a>All</a></li>
-            </ul>
-          </div>
-
-          <div class="field is-grouped">
-            <p class="control">
-              <button class="button is-light is-primary">
-                Edit
-              </button>
-            </p>
-            <p class="control">
-              <button class="button is-danger is-light">
-                Delete
-              </button>
-            </p>
-          </div>
+      <div class="table-container is-fullwidth">
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th><abbr title="Position" class="is-active">Note</abbr></th>
+              <!-- <th>Category</th> -->
+              <th>Last Update</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="table is-fullwidth">
+            <tr id="noteList">
+              <td id="listItem">Stuff and things</td>
+              <!-- <td id="categoryItem"><strong>Sales Meeting Key Points</strong></td> -->
+              <td id="dateItem">3/15/2020</td>
+              <!-- <td id="editItem"><button class="button is-light is-primary">Edit</button></td> -->
+              <td id="deleteItem"><button class="button is-light is-danger">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       </div>
       </div>
     </section>
     </div>
+
+
+
     <script src="/js/notes.js"></script>
 </body>
+
 </html>
