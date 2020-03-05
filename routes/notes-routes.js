@@ -20,10 +20,12 @@ module.exports = function(app) {
   app.post("/api/notes", function(req, res) {
     console.log(req.body);
     console.log(req.user);
+    console.log(req.body.category);
     db.note
       .create({
         body: req.body.text,
-        UserId: req.user.id
+        UserId: req.user.id,
+        category: req.body.category
       }).then(function(data){
         res.json(data);
       })
