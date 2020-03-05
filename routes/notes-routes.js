@@ -56,23 +56,17 @@ module.exports = function(app) {
   }
   );
   
-   app.delete("/api/notes", function(req, res) {
-     if (!req.user) {
-       // The user is not logged in, send back an empty object
-       res.json({});
-     } else {
-       // Otherwise send back the user's email and id
-       // Sending back a password, even a hashed password, isn't a good idea
-
-       db.note
-         .findAll({
-           where: { UserId: req.user.id }
-         })
-         .then(function(data) {
-           res.json(data);
-         });
-     }
-   });
+  // DELETE route for deleting posts
+  app.delete("/api/notes/:id", function (req, res) {
+    db.note.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function (data) {
+        res.json(data);
+      });
+  });
 
 };
 
