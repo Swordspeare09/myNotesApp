@@ -1,6 +1,7 @@
 var $noteText = $("#new_note");
 var $saveNoteBtn = $("#note_save");
 var $noteList = $("#noteList");
+var $noteDelete = $(".delete-note");
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
@@ -57,9 +58,9 @@ var handleNoteSave = function () {
 
 // Delete the clicked note
 var handleNoteDelete = function (event) {
+    event.stopPropagation();
+    console.log("Yooooo");
   // prevents the click listener for the list from being called when the button inside of it is clicked
-  event.stopPropagation();
-
   var note = $(this)
     .parent(".list-group-item")
     .data();
@@ -101,7 +102,7 @@ var renderNoteList = function (notes) {
       "<button class='button is-light is-primary'>Edit</button>"
     );
     var $delBtn = $(
-      "<button class='button is-danger is-light'>Delete</button>"
+      "<button class='button is-danger is-light float-right delete-note'> Delete </button>"
     );
 
     $li.append($span,$editBtn, $delBtn);
@@ -122,6 +123,7 @@ var getAndRenderNotes = function () {
 $saveNoteBtn.on("click", handleNoteSave);
 $noteList.on("click", ".list-group-item", handleNoteView);
 $noteList.on("click", ".delete-note", handleNoteDelete);
+$noteDelete.on("click", handleNoteDelete);
 
 
 // Gets and renders the initial list of notes
