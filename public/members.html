@@ -39,6 +39,7 @@
 
   <section class="hero is-primary is-bold">
     <div class="hero-body">
+<<<<<<< HEAD
       <div class="columns is-mobile ">
         <div class="column is-one-fifth">
           <figure class="image is-128x128">
@@ -54,15 +55,43 @@
             </div>
           </div>
         </div>
+=======
+      <div class="container">
+        <figure class="image is-128x128">
+          <img class="is-rounded" id="user_icon" src="https://bulma.io/images/placeholders/128x128.png">
+        </figure>
+      </div>
+      <div class="container">
+        <h1 class="title">
+          myNotes
+        </h1>
+        <h2 id="name_header"class="subtitle">
+          <!-- INSERT USERNAME -->'s personalized private note-taker!
+        </h2>
+>>>>>>> master
       </div>
   </section>
   <section>
     <div class="container">
       <section class="section">
         <div class="column is-half">
+          <form class ="control" action="submit">
           <div class="field">
             <div class="control">
               <input id="new_note" class="input is-primary" type="text" placeholder="Get Alcohol, Sleep...">
+            </div>
+          </div>
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <div class="select is-fullwidth">
+                <select id="note_option" name="category">
+                  <option value="1">General</option>
+                  <option value="2">Shopping List</option>
+                  <option value="3">Books to Read</option>
+                  <option value="4">Networking Contacts</option>
+                  <option value="5">Ideas to Cultivate</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -74,6 +103,7 @@
             </p>
 
           </div>
+          </form>
         </div>
     </div>
 
@@ -92,7 +122,7 @@
           <tbody class="table is-fullwidth">
             <tr id="noteList">
               <td id="listItem">Stuff and things</td>
-              <!-- <td id="categoryItem"><strong>Sales Meeting Key Points</strong></td> -->
+              <td id="categoryItem"><strong>Sales Meeting Key Points</strong></td> 
               <td id="dateItem">3/15/2020</td>
               <!-- <td id="editItem"><button class="button is-light is-primary">Edit</button></td> -->
               <td id="deleteItem"><button class="button is-light is-danger">Delete</button></td>

@@ -3,7 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const note = sequelize.define(
     "note",
     {
-      body: DataTypes.TEXT
+      body: DataTypes.TEXT,
+      category: DataTypes.STRING
     },
     {}
   );
