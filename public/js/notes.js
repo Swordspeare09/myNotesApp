@@ -117,8 +117,7 @@ var renderNoteList = function(notes) {
   for (var i = 0; i < notes.length; i++) {
     var note = notes[i];
 
-    //var $li = $("<li class='list-group-item'>").data(note);
-
+    
     var $newTbaleRow = $(`<tr ><td id="listItem">${note.body}</td>
       <td id="categoryItem"><strong>${note.category}</strong></td>
       <td id="dateItem">${note.createdAt}</td>
